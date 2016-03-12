@@ -29,6 +29,7 @@ If you're a developer and want to cancel the reconnect-process for any reason, y
 Other..
 ------
 Officially tested with **BungeeCord Build #1093** and **Spigot 1.8.8-R0.1-SNAPSHOT**.
+This plugin supports **BungeeCord 1.7/1.8** and **BungeeCord 1.8/1.9**!
 If you encounter any problems, please first make sure you update BungeeCord and Spigot before creating an issue report.
 Under certain circumstances, this plugin might work with older versions, but we don't support it officially.
 
