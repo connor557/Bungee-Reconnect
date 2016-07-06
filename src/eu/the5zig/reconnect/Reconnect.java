@@ -4,8 +4,8 @@ import com.google.common.base.Strings;
 import com.google.common.io.ByteStreams;
 import com.google.common.io.Files;
 
-import eu.the5zig.reconnect.api.ServerReconnectEvent;
 import eu.the5zig.reconnect.net.ReconnectBridge;
+import eu.the5zig.reconnect.api.ServerReconnectEvent;
 import net.md_5.bungee.ServerConnection;
 import net.md_5.bungee.UserConnection;
 import net.md_5.bungee.api.ChatColor;
@@ -35,6 +35,7 @@ public class Reconnect extends Plugin implements Listener {
 	private String connectingActionBar = "&7Connecting you to the server..";
 	private String failedTitle = "&cReconnecting failed!";
 	private String failedActionBar = "&eYou have been moved to the fallback server!";
+	private int delayBeforeTrying = 60000;
 	private int maxReconnectTries = 20;
 	private int reconnectMillis = 1000;
 	private int reconnectTimeout = 5000;
@@ -83,6 +84,7 @@ public class Reconnect extends Plugin implements Listener {
 				connectingActionBar = configuration.getString("connecting-text.actionbar", connectingActionBar);
 				failedTitle = configuration.getString("failed-text.title", failedTitle);
 				failedActionBar = configuration.getString("failed-text.actionbar", failedActionBar);
+				delayBeforeTrying = configuration.getInt("delay-before-trying", delayBeforeTrying);
 				maxReconnectTries = Math.max(configuration.getInt("max-reconnect-tries", maxReconnectTries), 1);
 				reconnectMillis = Math.max(configuration.getInt("reconnect-time", reconnectMillis), 0);
 				reconnectTimeout = Math.max(configuration.getInt("reconnect-timeout", reconnectTimeout), 1000);
@@ -193,7 +195,7 @@ public class Reconnect extends Plugin implements Listener {
 	private void reconnect(UserConnection user, ServerConnection server) {
 		ReconnectTask reconnectTask = reconnectTasks.get(user.getUniqueId());
 		if (reconnectTask == null) {
-			reconnectTasks.put(user.getUniqueId(), reconnectTask = new ReconnectTask(this, getProxy(), user, server));
+			reconnectTasks.put(user.getUniqueId(), reconnectTask = new ReconnectTask(this, getProxy(), user, server, System.currentTimeMillis()));
 		}
 		reconnectTask.tryReconnect();
 	}
@@ -223,7 +225,7 @@ public class Reconnect extends Plugin implements Listener {
 	public String getReconnectingTitle() {
 		return ChatColor.translateAlternateColorCodes('&', reconnectingTitle);
 	}
-	
+
 	public String getReconnectingActionBar() {
 		return ChatColor.translateAlternateColorCodes('&', reconnectingActionBar);
 	}
@@ -231,17 +233,21 @@ public class Reconnect extends Plugin implements Listener {
 	public String getConnectingTitle() {
 		return ChatColor.translateAlternateColorCodes('&', connectingTitle);
 	}
-	
+
 	public String getConnectingActionBar() {
 		return ChatColor.translateAlternateColorCodes('&', connectingActionBar);
 	}
-	
+
 	public String getFailedTitle() {
 		return ChatColor.translateAlternateColorCodes('&', failedTitle);
 	}
-	
+
 	public String getFailedActionBar() {
 		return ChatColor.translateAlternateColorCodes('&', failedActionBar);
+	}
+
+	public int getDelayBeforeTrying() {
+		return delayBeforeTrying;
 	}
 
 	public int getMaxReconnectTries() {

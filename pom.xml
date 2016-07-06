@@ -15,25 +15,25 @@
 				<targetPath>.</targetPath>
 				<directory>${basedir}/src/</directory>
 				<includes>
-					<include>plugin.yml</include>
+					<include>bungee.yml</include>
 					<include>config.yml</include>
 				</includes>
 			</resource>
 		</resources>
 	</build>
 	<repositories>
-        <repository>
-        	<id>yawk</id>
-        	<url>http://repo.shortbyte.de/content/repositories/minecraft/</url>
-        </repository>
+		<repository>
+			<id>bungeecord-repo</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
-            <groupId>net.md_5</groupId>
-            <artifactId>bungee</artifactId>
-            <version>1.9</version>
-            <scope>provided</scope>
-        </dependency>
+			<groupId>net.md-5</groupId>
+			<artifactId>bungeecord-bootstrap</artifactId>
+			<version>1.10-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

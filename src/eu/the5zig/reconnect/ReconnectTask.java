@@ -1,5 +1,6 @@
 package eu.the5zig.reconnect;
 
+import com.google.common.base.Strings;
 import eu.the5zig.reconnect.net.BasicChannelInitializer;
 import eu.the5zig.reconnect.util.Utils;
 import io.netty.bootstrap.Bootstrap;
@@ -20,8 +21,6 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import com.google.common.base.Strings;
-
 public class ReconnectTask {
 
 	private static final Random RANDOM = new Random();
@@ -32,15 +31,18 @@ public class ReconnectTask {
 	private final UserConnection user;
 	private final ServerConnection server;
 	private final BungeeServerInfo target;
+	private final long startTime;
 
+	private int visualTries;
 	private int tries;
 
-	public ReconnectTask(Reconnect instance, ProxyServer bungee, UserConnection user, ServerConnection server) {
+	public ReconnectTask(Reconnect instance, ProxyServer bungee, UserConnection user, ServerConnection server, long startTime) {
 		this.instance = instance;
 		this.bungee = bungee;
 		this.user = user;
 		this.server = server;
 		this.target = server.getInfo();
+		this.startTime = startTime;
 	}
 
 	/**
@@ -82,10 +84,15 @@ public class ReconnectTask {
 			instance.getLogger().warning("User already connecting to " + target);
 			return;
 		}
+
 		// Add pending connection.
 		user.getPendingConnects().add(target);
 
-		tries++;
+		// Add a try if the delay is not active
+		if (startTime + instance.getDelayBeforeTrying() <= System.currentTimeMillis()) {
+			tries++;
+		}
+		visualTries++;
 
 		// Send fancy Title
 		if (!instance.getReconnectingTitle().isEmpty()) {
@@ -102,7 +109,8 @@ public class ReconnectTask {
 		ChannelFutureListener listener = new ChannelFutureListener() {
 			@Override
 			public void operationComplete(ChannelFuture future) throws Exception {
-				if (future.isSuccess()) {
+				if (future.isSuccess()
+						&& startTime + instance.getDelayBeforeTrying() <= System.currentTimeMillis()) {
 					// If reconnected successfully, remove from map and send another fancy title.
 					instance.cancelReconnectTask(user.getUniqueId());
 
@@ -232,7 +240,7 @@ public class ReconnectTask {
 	private String getDots() {
 		String dots = "";
 
-		for (int i = 0, max = tries % 4; i < max; i++) {
+		for (int i = 0, max = visualTries % 4; i < max; i++) {
 			dots += ".";
 		}
 

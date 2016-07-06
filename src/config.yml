@@ -4,7 +4,7 @@
 # The current version of this configuration. Do NOT change this value!
 # If the plugin uses a more recent config version, this config gets replaced by it
 # while a backup of the old config will be kept as "config.old.yml".
-version: 2
+version: 3
 
 # The text that should be displayed, when the plugin is trying to reconnect a player.
 # Leave empty if you don't wish any title or action bar message to be displayed.
@@ -28,6 +28,9 @@ failed-text:
   title: "&cReconnecting failed!"
   actionbar: "&eYou have been moved to the fallback server!"
 
+
+# The amount of milliseconds the plugin should wait before attempting to check if the server is alive.
+delay-before-trying: 60000
 
 # The maximum amount of reconnect tries the plugin should make, before either connecting the player
 # to your fallback-server or disconnecting him. This value cannot be less than 1.
@@ -55,4 +58,3 @@ shutdown:
 
   text: "Server closed"
   regex: false
-  
