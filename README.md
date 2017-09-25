@@ -5,7 +5,7 @@ BUILD
 ------
 git clone https://github.com/krusic22/Bungee-Reconnect.git <br>
 cd Bungee-Reconnect <br>
-wget bungeecord-bootstrap-1.12-20170923.081054-27.jar <br>
+wget http://nexus.codecrafter47.dyndns.eu/content/repositories/snapshots/net/md-5/bungeecord-bootstrap/1.12-SNAPSHOT/bungeecord-bootstrap-1.12-20170923.081054-27.jar <br>
 mvn install <br>
 *The jar file will be inside the targer directory*
 
