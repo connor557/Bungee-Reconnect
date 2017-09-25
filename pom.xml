@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>eu.the5zig</groupId>
 	<artifactId>reconnect</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<packaging>jar</packaging>
 	<name>Bungee-Reconnect</name>
 	<description>A simple BungeeCord-Plugin that automatically tries to reconnect all players whenever a server restarts.</description>
@@ -24,20 +24,21 @@
 	<repositories>
 		<repository>
 			<id>bungeecord-repo</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<url>http://nexus.codecrafter47.dyndns.eu/content/repositories/snapshots/net/md-5/</url>
 		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>net.md-5</groupId>
 			<artifactId>bungeecord-bootstrap</artifactId>
-			<version>1.10-SNAPSHOT</version>
-			<scope>provided</scope>
+			<version>1.12-SNAPSHOT</version>
+			<scope>system</scope>
+             <systemPath>${project.basedir}/bungeecord-bootstrap-1.12-20170923.081054-27.jar</systemPath>
 		</dependency>
 	</dependencies>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 </project>

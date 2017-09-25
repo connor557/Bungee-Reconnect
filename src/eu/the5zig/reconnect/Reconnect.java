@@ -37,8 +37,8 @@ public class Reconnect extends Plugin implements Listener {
 	private String failedActionBar = "&eYou have been moved to the fallback server!";
 	private int delayBeforeTrying = 60000;
 	private int maxReconnectTries = 20;
-	private int reconnectMillis = 1000;
-	private int reconnectTimeout = 5000;
+	private int reconnectMillis = 5000;
+	private int reconnectTimeout = 6000;
 	private List<String> ignoredServers = new ArrayList<>();
 	private String shutdownMessage = "Server closed";
 	private Pattern shutdownPattern = null;

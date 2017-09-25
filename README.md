@@ -1,14 +1,19 @@
 # Bungee-Reconnect
 A simple BungeeCord-Plugin that automatically tries to reconnect all players whenever a server restarts.
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=qXSPM3PpSOI" target="_blank"><img src="http://img.youtube.com/vi/qXSPM3PpSOI/0.jpg"alt="Bungee-Reconnect | Plugin Showcase" width="560" height="315" border="10" /></a>
+BUILD
 ------
+git clone https://github.com/krusic22/Bungee-Reconnect.git
+cd Bungee-Reconnect
+wget bungeecord-bootstrap-1.12-20170923.081054-27.jar
+mvn install
+*The jar file will be inside the targer directory*
 
-
+------
 Installation & Configuration
-------
-Bungee-Reconnect is a **BungeeCord plugin**! Just put it into the BungeeCord plugins folder, start/restart your server and the plugin will generate a configuration in the plugins folder.
 
+Bungee-Reconnect is a **BungeeCord plugin**! Just put it into the BungeeCord plugins folder, start/restart your server and the plugin will generate a configuration in the plugins folder.
+Addition configs are available thanks to Terrobility.
 
 Features
 ------
@@ -28,23 +33,21 @@ If you're a developer and want to cancel the reconnect-process for any reason, y
 
 Other
 ------
-Officially tested with **BungeeCord Build #1093** and **Spigot 1.8.8-R0.1-SNAPSHOT**.
-This plugin supports **BungeeCord 1.7/1.8** and **BungeeCord 1.8/1.9**!
+Officially tested with **Waterfall #146** and **Paper 1.12.2-R0.1-SNAPSHOT #1217**.
+This plugin supports (officially) **BungeeCord 1.12.2** and **Spigot 1.12.2**!
 If you encounter any problems, please first make sure you update BungeeCord and Spigot before creating an issue report.
-Under certain circumstances, this plugin might work with older versions, but we don't support it officially.
-
+Under certain circumstances, this plugin might work with older versions, but we <b>don't</b> support it officially.
 
 
 Useful Links
 ------
 - [BungeeCord](https://www.spigotmc.org/wiki/bungeecord/)
 - [Plugin Page](https://www.spigotmc.org/resources/bungee-reconnect.16429/)
-- [Raw Concept](https://www.spigotmc.org/threads/how-to-create-a-fake-keep-alive-server.111825/#post-1203686)
 - [Inspired by a SpigotMC Forum Thread](https://www.spigotmc.org/threads/restart-plugin-built-into-spigot-pls-help-4-diamond.111789/)
 
 
 Credits
 ------
 - Development: [5zig](https://github.com/5zig)
-- Contribution: [Krymonota](https://github.com/Krymonota)
+- Contribution: [Krymonota](https://github.com/Krymonota), [Terrobility](https://github.com/Terrobility), [krusic22](https://github.com/krusic22)
 - Inspiration: [SpigotMC Forum Thread](https://www.spigotmc.org/threads/restart-plugin-built-into-spigot-pls-help-4-diamond.111789/)

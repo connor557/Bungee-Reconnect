@@ -15,7 +15,7 @@ import net.md_5.bungee.api.Title;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.config.ServerInfo;
 import net.md_5.bungee.netty.PipelineUtils;
-import net.md_5.bungee.protocol.packet.KeepAlive;
+//import net.md_5.bungee.protocol.packet.KeepAlive; - >KeepAlive in 1.12.2 - krusic22
 
 import java.util.Objects;
 import java.util.Random;
@@ -128,7 +128,7 @@ public class ReconnectTask {
 					user.getPendingConnects().remove(target);
 
 					// Send KeepAlive Packet so that the client won't time out.
-					user.unsafe().sendPacket(new KeepAlive(RANDOM.nextInt()));
+					//user.unsafe().sendPacket(new KeepAlive(RANDOM.nextInt())); - >KeepAlive in 1.12.2 - krusic22
 
 					// Schedule next reconnect.
 					Utils.scheduleAsync(instance, new Runnable() {
