@@ -3,10 +3,10 @@ A simple BungeeCord-Plugin that automatically tries to reconnect all players whe
 
 BUILD
 ------
-git clone https://github.com/krusic22/Bungee-Reconnect.git <b>
-cd Bungee-Reconnect <b>
-wget bungeecord-bootstrap-1.12-20170923.081054-27.jar <b>
-mvn install <b>
+git clone https://github.com/krusic22/Bungee-Reconnect.git <br>
+cd Bungee-Reconnect <br>
+wget bungeecord-bootstrap-1.12-20170923.081054-27.jar <br>
+mvn install <br>
 *The jar file will be inside the targer directory*
 
 ------
