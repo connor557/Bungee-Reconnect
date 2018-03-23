@@ -3,9 +3,6 @@
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
 version: 2
-general:
-  artifacts:
-    - "*.jar" # relative to the build directory
 jobs:
   build:
     docker:
@@ -45,3 +42,6 @@ jobs:
       
       # run build
       - run: mvn install
+      
+      - store_artifacts:
+          path: ~/repo/*.jar
