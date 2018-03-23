@@ -39,9 +39,7 @@ jobs:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
-      
-      - run wget  http://nexus.codecrafter47.dyndns.eu/content/repositories/snapshots/net/md-5/bungeecord-bootstrap/1.12-SNAPSHOT/bungeecord-bootstrap-1.12-20170923.081054-27.jar  
-      
+            
       # run tests!
       - run: mvn integration-test
       
