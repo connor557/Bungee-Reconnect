@@ -39,7 +39,7 @@ If you encounter any problems, please first make sure you update BungeeCord and 
 Under certain circumstances, this plugin might work with older versions, but we <b>don't</b> support it officially.
 
 
-Useful Links
+Useful Links (OLD)
 ------
 - [BungeeCord](https://www.spigotmc.org/wiki/bungeecord/)
 - [Plugin Page](https://www.spigotmc.org/resources/bungee-reconnect.16429/)
@@ -48,6 +48,7 @@ Useful Links
 
 Credits
 ------
-- Development: [5zig](https://github.com/5zig)
+- Current Active Maintainer [connor557](https://github.com/connor557)
+- Original Developmer: [5zig](https://github.com/5zig)
 - Contribution: [Krymonota](https://github.com/Krymonota), [Terrobility](https://github.com/Terrobility), [krusic22](https://github.com/krusic22)
 - Inspiration: [SpigotMC Forum Thread](https://www.spigotmc.org/threads/restart-plugin-built-into-spigot-pls-help-4-diamond.111789/)
