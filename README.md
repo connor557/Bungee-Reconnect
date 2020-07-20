@@ -3,11 +3,7 @@ A simple BungeeCord-Plugin that automatically tries to reconnect all players whe
 
 BUILD
 ------
-git clone https://github.com/krusic22/Bungee-Reconnect.git <br>
-cd Bungee-Reconnect <br>
-wget http://nexus.codecrafter47.dyndns.eu/content/repositories/snapshots/net/md-5/bungeecord-bootstrap/1.12-SNAPSHOT/bungeecord-bootstrap-1.12-20170923.081054-27.jar <br>
-mvn install <br>
-*The jar file will be inside the targer directory*
+Automated Gradle/Kotlin build workflow is being provisioned on the "gradle" branch. Please DO NOT BUILD from this branch as it does not support automatically connecting to maven nexus artifact repositories.
 
 ------
 Installation & Configuration
