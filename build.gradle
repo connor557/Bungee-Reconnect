@@ -19,7 +19,7 @@ dependencies {
 }
 
 group = 'net.ddns.minecraftbukkit'
-version = '1.4.2-RC1'
+version = '1.4.2-FINAL'
 description = 'BMGR-Core'
 sourceCompatibility = '1.8'
 
