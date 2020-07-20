@@ -3,7 +3,7 @@ A simple BungeeCord-Plugin that automatically tries to reconnect all players whe
 
 BUILD
 ------
-Automated Gradle/Kotlin build workflow is being provisioned on the "gradle" branch. Please DO NOT BUILD from this branch as it does not support automatically connecting to maven nexus artifact repositories.
+Already setup to track most recent BungeeCord upstream from Maven master, just run "gradle build"
 
 ------
 Installation & Configuration
