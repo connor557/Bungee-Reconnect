@@ -1,0 +1,70 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "net.ddns.minecraftbukkit",
+    "module": "bmgr-core",
+    "version": "1.4.2-RC1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.5.1",
+      "buildId": "6xgga5ftejajvm4e62woto4eb4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "bmgr-core-1.4.2-RC1.jar",
+          "url": "bmgr-core-1.4.2-RC1.jar",
+          "size": 261,
+          "sha512": "2a3d72796530ba5344d27bccaafdbc5f7c41214890fccac1cbb6604064b5cdee1a5ae78b495489b684694ebda12f6322caae6fde3c73471664be3937f4553290",
+          "sha256": "4c5d4f736324dd78f24e18128bb085d254a555d54f13fcb4ef2e1acd4285d68f",
+          "sha1": "c30a07211e14e09ffccc8023d6bad865fed67937",
+          "md5": "999d09c74a6dd61f56796588a8adca85"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.HexagonMC.BungeeCord",
+          "module": "bungeecord-api",
+          "version": {
+            "requires": "262"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bmgr-core-1.4.2-RC1.jar",
+          "url": "bmgr-core-1.4.2-RC1.jar",
+          "size": 261,
+          "sha512": "2a3d72796530ba5344d27bccaafdbc5f7c41214890fccac1cbb6604064b5cdee1a5ae78b495489b684694ebda12f6322caae6fde3c73471664be3937f4553290",
+          "sha256": "4c5d4f736324dd78f24e18128bb085d254a555d54f13fcb4ef2e1acd4285d68f",
+          "sha1": "c30a07211e14e09ffccc8023d6bad865fed67937",
+          "md5": "999d09c74a6dd61f56796588a8adca85"
+        }
+      ]
+    }
+  ]
+}
