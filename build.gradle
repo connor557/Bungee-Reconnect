@@ -18,8 +18,8 @@ dependencies {
     implementation 'com.github.HexagonMC.BungeeCord:bungeecord-api:262'
 }
 
-group = 'net.ddns.minecraftbukkit'
-version = '1.4.2-RC1'
+group = 'net.zyrus.bmgr'
+version = '1.4.5'
 description = 'BMGR-Core'
 sourceCompatibility = '1.8'
 
