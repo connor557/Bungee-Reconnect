@@ -1,5 +1,5 @@
 name: Reconnect
-version: 1.0.3
-main: eu.the5zig.reconnect.Reconnect
-author: 5zig (Development), Krymonota (Contribution), Terrobility (Addition Configs), krusic22 (1.12.2 Fix)
-website: https://github.com/5zig/Bungee-Reconnect
+version: 1.4.5
+main: net.zyrus.bmgr
+author: 5zig (Development), Krymonota (Contribution), Terrobility (Addition Configs), krusic22 (1.12.2 Fix), connor557 (Zyrus optimizations + 1.16 fixes)
+website: https://github.com/connor557/Bungee-Reconnect
